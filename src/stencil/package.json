@@ -1,0 +1,13 @@
+{
+  "name": "stencil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "stencil build"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@stencil/core": "^4.45.2"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "web-components-showcase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@microsoft/fast-element": "^3.1.2",
+    "@stencil/core": "^4.45.2",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "lit": "^3.3.3",
+    "svelte": "^5.57.3",
+    "vite": "^8.3.6"
+  }
+}

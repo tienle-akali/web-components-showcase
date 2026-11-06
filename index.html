@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Components Showcase - So sánh các thư viện</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        background: #f4f6f8;
+      }
+      .grid {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .box {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>So sánh các thư viện Web Components</h1>
+    <p>
+      Dưới đây là cùng một giao diện User Card được viết bằng 5 công nghệ khác
+      nhau trong cùng một repo:
+    </p>
+
+    <div class="grid">
+      <div class="box">
+        <h3>1. Vanilla JS</h3>
+        <vanilla-card
+          name="Tien Dev"
+          email="vanilla@example.com"
+        ></vanilla-card>
+      </div>
+
+      <div class="box">
+        <h3>2. Lit (Google)</h3>
+        <lit-card name="Tien Dev" email="lit@example.com"></lit-card>
+      </div>
+
+      <div class="box">
+        <h3>3. Stencil.js (Ionic)</h3>
+        Để tránh xung đột với các thư viện khác, bạn cần build Stencil.js trước
+        khi sử dụng. Bạn có thể chạy lệnh sau để build:
+        <pre><code>stencil build</code></pre>
+        <!-- <stencil-card
+          name="Tien Dev"
+          email="stencil@example.com"
+        ></stencil-card> -->
+      </div>
+
+      <div class="box">
+        <h3>4. FAST (Microsoft)</h3>
+        <fast-card name="Tien Dev" email="fast@example.com"></fast-card>
+      </div>
+
+      <div class="box">
+        <h3>5. Svelte</h3>
+        <svelte-card name="Tien Dev" email="svelte@example.com"></svelte-card>
+      </div>
+    </div>
+
+    <!-- Nạp các file script đã build hoặc ES modules trực tiếp -->
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
