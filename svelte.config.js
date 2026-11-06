@@ -4,5 +4,6 @@ export default {
 
   compilerOptions: {
     // Các cấu hình biên dịch chung (nếu cần)
+    customElement: true,
   },
 };
