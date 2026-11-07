@@ -27,6 +27,12 @@ importers:
         specifier: ^8.3.6
         version: 8.3.6
 
+  packages/stencil-card:
+    devDependencies:
+      '@stencil/core':
+        specifier: ^4.45.2
+        version: 4.45.2
+
 packages:
 
   '@jridgewell/gen-mapping@0.3.13':
