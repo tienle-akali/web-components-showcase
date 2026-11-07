@@ -6,19 +6,54 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface StencilCard {
+        /**
+          * @default "youremail@example.com"
+         */
+        "email": string;
+        /**
+          * @default "Your name"
+         */
+        "name": string;
+    }
 }
 declare global {
+    interface HTMLStencilCardElement extends Components.StencilCard, HTMLStencilElement {
+    }
+    var HTMLStencilCardElement: {
+        prototype: HTMLStencilCardElement;
+        new (): HTMLStencilCardElement;
+    };
     interface HTMLElementTagNameMap {
+        "stencil-card": HTMLStencilCardElement;
     }
 }
 declare namespace LocalJSX {
+    interface StencilCard {
+        /**
+          * @default "youremail@example.com"
+         */
+        "email"?: string;
+        /**
+          * @default "Your name"
+         */
+        "name"?: string;
+    }
+
+    interface StencilCardAttributes {
+        "name": string;
+        "email": string;
+    }
+
     interface IntrinsicElements {
+        "stencil-card": Omit<StencilCard, keyof StencilCardAttributes> & { [K in keyof StencilCard & keyof StencilCardAttributes]?: StencilCard[K] } & { [K in keyof StencilCard & keyof StencilCardAttributes as `attr:${K}`]?: StencilCardAttributes[K] } & { [K in keyof StencilCard & keyof StencilCardAttributes as `prop:${K}`]?: StencilCard[K] };
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "stencil-card": LocalJSX.IntrinsicElements["stencil-card"] & JSXBase.HTMLAttributes<HTMLStencilCardElement>;
         }
     }
 }

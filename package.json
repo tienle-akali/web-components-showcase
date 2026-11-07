@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "pnpm --filter stencil-card build && vite",
     "build": "pnpm --filter stencil-card build && vite build",
     "preview": "vite preview"
   },
