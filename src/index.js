@@ -4,13 +4,13 @@
 import "./vanilla/user-card.js";
 
 // 2. Lit Component (Google)
-import "./lit/user-card.js";
+import "./lit/user-card.ts";
 
 // 3. Stencil Component (Đã build sẵn trong package)
 import "../packages/stencil-card/dist/components/stencil-card.js";
 
 // 4. FAST Component (Microsoft)
-import "./fast/user-card.js";
+import "./fast/user-card.ts";
 
 // 5. Svelte Component
 import "./svelte/UserCard.svelte";
